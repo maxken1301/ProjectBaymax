@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Baymax</title>
+	<audio src="intro.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/projectB.css">
+	<script type="text/javascript" src="assets/js/lib/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.js"></script>
+	
+</head>
+<body>
+
+</body>
+
+<div class="mt-5">
+	<div class="row">
+	<div class="col-md-4 p-0">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<div class="frame">
+					<img src="img/DWyJ.gif" width="80%">
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+		
+	</div>
+	<div class="col-md-8 p-0">
+		<img class="p-t-6" src="img/final.gif" id="imgB" >
+		<div id="messageBox">
+			<p id="message"></p>
+		</div>
+		<button class="btn btn-md btn-alert" id="butt">click me</button>
+
+	</div>
+	
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+/*var i =0, text;
+text = "Hi Im Baymax, your personal health care Companion.";
+function typeAnimate(){
+	
+
+	if(i<text.length){
+	var tex =document.getElementById("message");
+	tex.textContent += text.charAt(i);
+		i++;
+		setTimeout(typeAnimate, 50);
+	}	
+}
+typeAnimate();*/
+var cout = 1;
+let date = new Date();
+var curdate = date.getDay();
+//alert(curdate);
+var name = "Hi Im Baymax, your personal health care Companion.         ";
+ar();
+function ar(){
+	myArray = textR(name);
+}
+var loopTimer;
+function frameLooper(){
+	
+	
+	if(myArray.length > 0){
+		document.getElementById("message").innerHTML += myArray.shift();
+	}else{
+		clearTimeout(loopTimer);
+		if(curdate==3 && cout == 1){
+			document.getElementById("message").textContent = "";
+			cout = 2;
+			name = "Happy Birthday, Razel Maxine Grimpola";
+			ar();
+			frameLooper01();
+
+		}
+		
+	}
+	loopTimer = setTimeout(frameLooper, 150)
+
+}
+function frameLooper01(text){
+
+	if(myArray.length > 0){
+		document.getElementById("message").innerHTML += myArray.shift();
+	}else{
+		clearTimeout(loopTimer);		
+		}	
+	loopTimer = setTimeout(frameLooper, 150)
+}
+frameLooper();
+function textR(myString){
+	var mArray = myString.split("");
+	return mArray;
+}
+var butt = document.getElementById("butt");
+
+
+butt.addEventListener('click',function(){
+	name = prompt("enter name: ")
+	document.getElementById("message").textContent = "";
+	ar();
+frameLooper();
+})
+
+
+
+
+
+</script>
+	<script type="text/javascript" src="assets/js/projectB.js"></script>
+</html>

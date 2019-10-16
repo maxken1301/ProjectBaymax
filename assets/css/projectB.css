@@ -1,0 +1,61 @@
+@font-face {
+	src: url(assets/fonts/Orbitron-Black.ttf);
+	font-family: Orb;
+}
+body {
+  background: radial-gradient(circle at center, #fff, #fff 50%, #aaa);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#imgB {
+	max-width: 700px;
+	max-height: 900px;
+
+}
+.frame {
+	margin-left: 10px;
+	margin: 5px;
+	padding: 8px;
+	border: 10px solid;
+    border-image: linear-gradient(45deg, rgb(168, 168, 168), rgb(182, 182, 182)) 1;
+	height: 450px;
+	max-width:  100%;
+	background: white;
+
+}
+#messageBox {
+	padding: 30px;
+	box-sizing: border-box;
+	margin-right: 100px;
+	width: 450px;
+	min-height: 190px;
+	height: auto;
+	border: 7px solid;
+	border-image: linear-gradient(45deg, rgb(168, 168, 168), rgb(182, 182, 182)) 1;
+	float: right;
+	background-color: #5b6467;
+background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+border-radius: 10px;
+}
+#messageBox:after {
+
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-left: 5px solid;
+	border-bottom: 5px solid;
+	top: 15%;
+	left: 37.6%;
+	content: '';
+	transform: rotate(45deg);
+	background: rgba(136, 144, 151, 70);
+	border-image: linear-gradient(45deg, rgb(168, 168, 168), rgb(182, 182, 182)) 1;
+
+}
+p {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 2rem;
+	color: white;
+}
