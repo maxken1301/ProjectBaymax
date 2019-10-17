@@ -84,7 +84,7 @@ function frameLooper(){
 		}
 		
 	}
-	loopTimer = setTimeout(frameLooper, 200);
+	loopTimer = setTimeout(frameLooper, 150);
 }
 function frameLooper01(){
 	if(myArray.length > 0){
@@ -92,7 +92,7 @@ function frameLooper01(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper, 200)
+	loopTimer = setTimeout(frameLooper, 100)
 }
 function frameLooper02(){
 	if(myArray.length > 0){
@@ -100,7 +100,7 @@ function frameLooper02(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper02, 200)
+	loopTimer = setTimeout(frameLooper02, 150)
 }
 
 frameLooper();
