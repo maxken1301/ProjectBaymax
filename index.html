@@ -82,15 +82,20 @@ function frameLooper(){
 		if(curdate==5 && cout == 1){
 			document.getElementById("message").textContent = "";
 			cout = 2;
-			name = "Happy Birthday, Razel Maxine Grimpola";
+			name = "Happy Birthday my friend, Razel Maxine Grimpola, May today be as special and wonderful as you";
 			ar();
 			frameLooper01();
 			
 		}else if(cout == 2){document.getElementById("message").textContent = "";
-			name = "more Birthdays to come";
+			name = "I want to wish you all the love and happiness in the world, all of which you deserve.";
 			ar();
 			frameLooper02();
 			cout = 3;
+		}else if(cout == 3){document.getElementById("message").textContent = "";
+			name = "May all your desires and plans turn into great successes. GOD bless you <3";
+			ar();
+			frameLooper03();
+			cout = 4;
 		}
 		
 	}
@@ -104,6 +109,14 @@ function frameLooper01(){
 		}	
 	loopTimer = setTimeout(frameLooper, 100)
 }
+function frameLooper03(){
+	if(myArray.length > 0){
+		document.getElementById("message").innerHTML += myArray.shift();
+	}else{
+		clearTimeout(loopTimer);		
+		}	
+	loopTimer = setTimeout(frameLooper, 100)
+}	
 function frameLooper02(){
 	if(myArray.length > 0){
 		document.getElementById("message").innerHTML += myArray.shift();
