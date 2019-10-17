@@ -79,7 +79,7 @@ function frameLooper(){
 		}
 		
 	}
-	loopTimer = setTimeout(frameLooper, 150)
+	loopTimer = setTimeout(frameLooper, 30)
 }
 function frameLooper01(text){
 	if(myArray.length > 0){
@@ -87,7 +87,7 @@ function frameLooper01(text){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper, 150)
+	loopTimer = setTimeout(frameLooper, 100)
 }
 frameLooper();
 function textR(myString){
