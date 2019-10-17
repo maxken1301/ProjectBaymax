@@ -16,7 +16,7 @@
 
 <div class="mt-5">
 	<div class="row">
-	<div class="d-s-none d-md-block col-md-3 p-0">
+	<div class="d-sm-none d-md-block col-md-3 p-0">
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
@@ -44,12 +44,11 @@
 text = "Hi Im Baymax, your personal health care Companion.";
 function typeAnimate(){
 	
-
 	if(i<text.length){
 	var tex =document.getElementById("message");
 	tex.textContent += text.charAt(i);
 		i++;
-		setTimeout(typeAnimate, 30);
+		setTimeout(typeAnimate, 50);
 	}	
 }
 typeAnimate();*/
@@ -76,15 +75,12 @@ function frameLooper(){
 			name = "Happy Birthday, Razel Maxine Grimpola";
 			ar();
 			frameLooper01();
-
 		}
 		
 	}
 	loopTimer = setTimeout(frameLooper, 150)
-
 }
 function frameLooper01(text){
-
 	if(myArray.length > 0){
 		document.getElementById("message").innerHTML += myArray.shift();
 	}else{
@@ -98,19 +94,12 @@ function textR(myString){
 	return mArray;
 }
 var butt = document.getElementById("butt");
-
-
 butt.addEventListener('click',function(){
 	name = prompt("enter name: ")
 	document.getElementById("message").textContent = "";
 	ar();
 frameLooper();
 })
-
-
-
-
-
 </script>
 	<script type="text/javascript" src="assets/js/projectB.js"></script>
 </html>
