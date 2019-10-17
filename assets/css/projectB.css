@@ -20,7 +20,7 @@ body {
 	padding: 8px;
 	border: 10px solid;
     border-image: linear-gradient(45deg, rgb(168, 168, 168), rgb(182, 182, 182)) 1;
-	height: 450px;
+	height: 460px;
 	max-width:  100%;
 	background: white;
 
@@ -29,8 +29,8 @@ body {
 	padding: 30px;
 	box-sizing: border-box;
 	margin-right: 100px;
-	width: 450px;
-	min-height: 190px;
+	width: 45%;
+	min-height: 30%;
 	height: auto;
 	border: 7px solid;
 	border-image: linear-gradient(45deg, rgb(168, 168, 168), rgb(182, 182, 182)) 1;
@@ -47,7 +47,7 @@ border-radius: 10px;
 	border-left: 5px solid;
 	border-bottom: 5px solid;
 	top: 15%;
-	left: 44.5%;
+	left: 43.2%;
 	content: '';
 	transform: rotate(45deg);
 	background: rgba(136, 144, 151, 70);
@@ -58,4 +58,17 @@ p {
 	font-family: 'Orbitron', sans-serif;
 	font-size: 2rem;
 	color: white;
+}
+.butts{
+	border: 2px #646D70 solid;
+	color: #646D70;
+	border-radius: 20px;
+
+}
+.butts:hover {
+	background: #8B939A;
+	color: white;
+}
+input{
+	border: 2px #646D70 solid;
 }
