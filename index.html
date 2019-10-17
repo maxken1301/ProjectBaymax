@@ -46,12 +46,23 @@
 
 </div>
 <script type="text/javascript">
-
+/*var i =0, text;
+text = "Hi Im Baymax, your personal health care Companion.";
+function typeAnimate(){
+	
+	if(i<text.length){
+	var tex =document.getElementById("message");
+	tex.textContent += text.charAt(i);
+		i++;
+		setTimeout(typeAnimate, 50);
+	}	
+}
+typeAnimate();*/
 var cout = 1;
 let date = new Date();
 var curdate = date.getDay();
-
-var name = "Hi Im Baymax, your personal health care Companion.           .";
+//alert(curdate);
+var name = "Hi Im Baymax, your personal health care Companion.         ";
 ar();
 function ar(){
 	myArray = textR(name);
@@ -71,19 +82,19 @@ function frameLooper(){
 		if(curdate==5 && cout == 1){
 			document.getElementById("message").textContent = "";
 			cout = 2;
-			name = "Happy Birthday my friend, Razel Maxine Grimpola, May today be as special and wonderful as you. . . . . . . . .";
+			name = "Happy Birthday, Razel Maxine Grimpola";
 			ar();
 			frameLooper01();
 			
 		}else if(cout == 2){document.getElementById("message").textContent = "";
-			name = "I want to wish you all the love and happiness in the world, all of which you deserve. Love you<3";
+			name = "more Birthdays to come";
 			ar();
 			frameLooper02();
 			cout = 3;
 		}
 		
 	}
-	loopTimer = setTimeout(frameLooper, 150);
+	loopTimer = setTimeout(frameLooper, 100);
 }
 function frameLooper01(){
 	if(myArray.length > 0){
@@ -99,7 +110,7 @@ function frameLooper02(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper02, 150)
+	loopTimer = setTimeout(frameLooper, 100)
 }
 
 frameLooper();
