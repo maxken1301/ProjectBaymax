@@ -21,7 +21,13 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				
+			<button class="btn btn-lg butts" id="butt">Fist Bump</button>
+				<button class="btn btn-lg butts" id="butt01">Scan </button>
+				<div class="mt-3">
+					<input id="mess" type="text" name="ss" placeholder="Enter your message">
+				</input>
+				<button class="btn btn-lg butts" id="butt02">Go</button>
+				</div>	
 			</div>
 			<div class="col-md-1"></div>
 		</div>
@@ -32,8 +38,7 @@
 		<div id="messageBox">
 			<p id="message"></p>
 		</div>
-		<button class="btn btn-md btn-alert" id="butt">click me</button>
-
+		
 	</div>
 	
 </div>
@@ -41,28 +46,21 @@
 
 </div>
 <script type="text/javascript">
-/*var i =0, text;
-text = "Hi Im Baymax, your personal health care Companion.";
-function typeAnimate(){
-	
-	if(i<text.length){
-	var tex =document.getElementById("message");
-	tex.textContent += text.charAt(i);
-		i++;
-		setTimeout(typeAnimate, 50);
-	}	
-}
-typeAnimate();*/
+
 var cout = 1;
 let date = new Date();
 var curdate = date.getDay();
-//alert(curdate);
-var name = "Hi Max!, I am Baymax, your personal health care Companion.         ";
+
+var name = "Hi Im Baymax, your personal health care Companion.         ";
 ar();
 function ar(){
 	myArray = textR(name);
 }
 var loopTimer;
+function nextLoop(message){
+	
+			
+}
 function frameLooper(){
 	
 	
@@ -76,12 +74,18 @@ function frameLooper(){
 			name = "Happy Birthday, Razel Maxine Grimpola";
 			ar();
 			frameLooper01();
+			
+		}else if(cout == 2){document.getElementById("message").textContent = "";
+			name = "more Birthdays to come";
+			ar();
+			frameLooper02();
+			cout = 3;
 		}
 		
 	}
-	loopTimer = setTimeout(frameLooper, 50)
+	loopTimer = setTimeout(frameLooper, 50);
 }
-function frameLooper01(text){
+function frameLooper01(){
 	if(myArray.length > 0){
 		document.getElementById("message").innerHTML += myArray.shift();
 	}else{
@@ -89,17 +93,43 @@ function frameLooper01(text){
 		}	
 	loopTimer = setTimeout(frameLooper, 100)
 }
+function frameLooper02(){
+	if(myArray.length > 0){
+		document.getElementById("message").innerHTML += myArray.shift();
+	}else{
+		clearTimeout(loopTimer);		
+		}	
+	loopTimer = setTimeout(frameLooper, 100)
+}
+
 frameLooper();
 function textR(myString){
 	var mArray = myString.split("");
 	return mArray;
 }
-var butt = document.getElementById("butt");
-butt.addEventListener('click',function(){
-	name = prompt("enter name: ")
-	document.getElementById("message").textContent = "";
+
+var butts = document.getElementById("butt01");
+butts.addEventListener('click',function(){
+	
+	var audio = new Audio('scan.mp3');
+	audio.play();
+	
+		document.getElementById("message").textContent = "";
+	name = ".   .   .   .   .   .   .   .  .   .   .   .   .   .   .  .  .  .  .  . . . .... Scan: Complete            Diagnoses: You are so cute <3";
 	ar();
-frameLooper();
+	frameLooper02();
+	
+
+	
+
+})
+
+butt02.addEventListener('click', function(){
+	document.getElementById("message").textContent = "";
+	name = document.getElementById("mess").value;
+	ar();
+	frameLooper02();
+	document.getElementById("mess").value = "";
 })
 </script>
 	<script type="text/javascript" src="assets/js/projectB.js"></script>
