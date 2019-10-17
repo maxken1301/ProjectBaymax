@@ -51,7 +51,7 @@ var cout = 1;
 let date = new Date();
 var curdate = date.getDay();
 
-var name = "Hi Im Baymax, your personal health care Companion.         ";
+var name = "Hi Im Baymax, your personal health care Companion.           ";
 ar();
 function ar(){
 	myArray = textR(name);
@@ -71,12 +71,12 @@ function frameLooper(){
 		if(curdate==5 && cout == 1){
 			document.getElementById("message").textContent = "";
 			cout = 2;
-			name = "Happy Birthday, Razel Maxine Grimpola";
+			name = "Happy Birthday my friend, Razel Maxine Grimpola, May today be as special and wonderful as you ";
 			ar();
 			frameLooper01();
 			
 		}else if(cout == 2){document.getElementById("message").textContent = "";
-			name = "more Birthdays to come";
+			name = "I want to wish you all the love and happiness in the world, all of which you deserve. Love you<3";
 			ar();
 			frameLooper02();
 			cout = 3;
@@ -91,7 +91,7 @@ function frameLooper01(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper, 100)
+	loopTimer = setTimeout(frameLooper, 150)
 }
 function frameLooper02(){
 	if(myArray.length > 0){
@@ -99,7 +99,7 @@ function frameLooper02(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper, 100)
+	loopTimer = setTimeout(frameLooper02, 150)
 }
 
 frameLooper();
