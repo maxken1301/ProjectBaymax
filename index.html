@@ -51,7 +51,7 @@ var cout = 1;
 let date = new Date();
 var curdate = date.getDay();
 
-var name = "Hi Im Baymax, your personal health care Companion.           ";
+var name = "Hi Im Baymax, your personal health care Companion.           .";
 ar();
 function ar(){
 	myArray = textR(name);
@@ -83,7 +83,7 @@ function frameLooper(){
 		}
 		
 	}
-	loopTimer = setTimeout(frameLooper, 100);
+	loopTimer = setTimeout(frameLooper, 200);
 }
 function frameLooper01(){
 	if(myArray.length > 0){
@@ -91,7 +91,7 @@ function frameLooper01(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper, 150)
+	loopTimer = setTimeout(frameLooper, 200)
 }
 function frameLooper02(){
 	if(myArray.length > 0){
@@ -99,7 +99,7 @@ function frameLooper02(){
 	}else{
 		clearTimeout(loopTimer);		
 		}	
-	loopTimer = setTimeout(frameLooper02, 150)
+	loopTimer = setTimeout(frameLooper02, 200)
 }
 
 frameLooper();
